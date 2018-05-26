@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Tunnel Rush</title>
+    <!-- <script src="require.js"></script> -->
+    <link rel="stylesheet" href="../webgl.css" type="text/css">
+      <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  #grad1 {
+    /*height: 200px;*/
+    background: linear-gradient(yellow, blue); /* For browsers that do not support gradients */
+    background: linear-gradient(yellow,green, gray, red); /* Standard syntax (must be last) */
+  }
+  body {
+    /*background-image: url("wallpaper.jpeg");*/
+    background-color: #cccccc;
+    }
+    canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    }
+    .alnleft { text-align: left; }
+    .stop-scrolling {
+      height: 100%;
+      overflow: hidden;
+    }
+    h1, h2 {
+    display: inline;
+    }
+    audio { 
+   display:none;
+    }
+  </style>
+  </head>
+  <audio id="game_sound_id" autoplay="autoplay" loop="loop">
+    <source src="game_sound.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="jump_id">
+    <source src="jump_sound.mp3" type="audio/mpeg">
+  </audio>
+  <audio id="crash_id">
+    <source src="crashed.mp3" type="audio/mpeg">
+  </audio>  
+  <audio id="turn_id">
+    <source src="turn_sound.mp3" type="audio/mpeg">
+  </audio>  
+  <audio id="level_id_sound">
+    <source src="level_sound.mp3" type="audio/mpeg">
+  </audio>  
+  <body class="stop-scrolling">
+    <div id="grad1">
+    <table>
+      <tr>
+        <td>
+          <div class="container">
+          <h1 id="score_id"> <span class="label label-success">SCORE</span></h1>
+          </div>
+        </td>
+        <td class="alnleft">
+          <div class="container">
+          <h1 id="level_id"> <span class="label label-success">LEVEL</span></h1>
+          </div>
+          <div class="container">
+          <h1 id="speed_id"> <span class="label label-success">SPEED</span></h1>
+          </div>
+        </td>
+      </tr>
+    </table>
+    <canvas id="glcanvas" width="1800 align="center" height="920"></canvas>
+  </div>
+  </body>
+  <script src="mousetrap.min.js"></script>
+  <script src="texture.js"></script>
+  <script src="tunnel.js"></script>
+  <script src="obstacle.js"></script>
+  <script src="obstacle2.js"></script>
+  <script src="./gl-matrix.js"></script>
+  <script src="webgl-demo.js"></script>
+</html>
